@@ -17,8 +17,9 @@ import com.amap.api.maps.model.MarkerOptions;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
+
     private AMap aMap;
-    MapView mMapView = null;
+    private MapView mMapView = null;
 
     private EditText southwest_lat;
     private EditText southwest_lng;
