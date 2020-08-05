@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/southwest_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="southwest-lat" />
+
+        <EditText
+            android:id="@+id/southwest_lng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="southwest-lng" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/northeast_lat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="northeast-lat" />
+
+        <EditText
+            android:id="@+id/northeast_lng"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="northeast-lng" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="setLatLngBounds"
+            android:text="setLatLngBounds"
+            android:textAllCaps="false" />
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="clear"
+            android:text="clear"
+            android:textAllCaps="false" />
+
+    </LinearLayout>
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+</LinearLayout>
