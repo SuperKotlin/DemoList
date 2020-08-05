@@ -92,7 +92,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void clear(View view) {
-
         aMap.setMapStatusLimits(null);
     }
 

@@ -58,7 +58,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="clear"
-            android:text="clear"
+            android:text="解除限制"
             android:textAllCaps="false" />
 
     </LinearLayout>
