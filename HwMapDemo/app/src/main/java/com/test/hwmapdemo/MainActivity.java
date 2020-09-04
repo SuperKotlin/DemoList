@@ -9,7 +9,7 @@ import com.huawei.hms.maps.HuaweiMap;
 import com.huawei.hms.maps.MapView;
 import com.huawei.hms.maps.OnMapReadyCallback;
 
-public class MainActivity extends AppCompatActivity  implements OnMapReadyCallback {
+public class MainActivity extends AppCompatActivity implements OnMapReadyCallback {
     private static final String TAG = "MainActivity";
     private static final String MAPVIEW_BUNDLE_KEY = "MapViewBundleKey";
     private MapView mMapView;
@@ -22,13 +22,12 @@ public class MainActivity extends AppCompatActivity  implements OnMapReadyCallba
 
         mMapView = findViewById(R.id.mapview_mapviewdemo);
 
-        Bundle mapViewBundle = savedInstanceState.getBundle(MAPVIEW_BUNDLE_KEY);
-        if (mapViewBundle == null) {
-            mapViewBundle = new Bundle();
-            savedInstanceState.putBundle(MAPVIEW_BUNDLE_KEY, mapViewBundle);
+        Bundle mapViewBundle = null;
+        if (savedInstanceState != null) {
+            mapViewBundle = savedInstanceState.getBundle("MapViewBundleKey");
         }
-
-        mMapView.onSaveInstanceState(mapViewBundle);
+        mMapView.onCreate(mapViewBundle);
+        mMapView.getMapAsync(this);
     }
 
     public void onMapReady(HuaweiMap map) {
