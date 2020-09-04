@@ -2,6 +2,7 @@ package com.test.gdmaps;
 
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
@@ -20,6 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     private AMap aMap;
     private MapView mMapView = null;
+
 
     private EditText southwest_lat;
     private EditText southwest_lng;
@@ -46,6 +48,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void setLatLngBounds(View view) {
+
+        new Thread(() -> {
+            Handler handler = new Handler();
+            handler.obtainMessage();
+        }).start();
+
         try {
             aMap.clear();
 

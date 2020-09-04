@@ -1,0 +1,12 @@
+{
+  "client": {
+    "cp_id": "260086000054571879",
+    "product_id": "736430079244623765",
+    "client_id": "444159260570420352",
+    "client_secret": "E02F4B50235CFD06F5B1A629B9A4E1FF6E51C5D9712FE9203A4FC3F26DC8CDF1",
+    "app_id": "102844429",
+    "package_name": "com.test.hwmapdemo",
+    "api_key": "CgB6e3x9LlZu7CzGeBgFTFlfnN3HEIEkSZSYEudrrDlhlqfQNlQbPOhsy3W/BZbkXpxZDyqqMkdyrtC36iYZ2I31"
+  },
+  "configuration_version": "1.0"
+}
