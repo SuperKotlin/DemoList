@@ -1,6 +1,8 @@
 package com.test.hellohuaweimaps;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -18,7 +20,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class MapActivity extends AppCompatActivity implements OnMapReadyCallback {
 
     private MapView mMapView;
-    private TextView textView;
+    private Button textView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,9 +35,15 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
         mMapView.onCreate(mapViewBundle);
         mMapView.getMapAsync(this);
 
-        textView.setTypeface(App.getTypeface());
-        textView.setText("华为地图");
+        textView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                hMap.setPadding(200, 200, 200, 200);
+            }
+        });
     }
+
+    HuaweiMap hMap;
 
     /**
      * 当地图准备完成以后，会回调次方法
@@ -44,6 +52,7 @@ public class MapActivity extends AppCompatActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapReady(HuaweiMap huaweiMap) {
+        hMap = huaweiMap;
         //构造一个经纬度坐标对象
         LatLng latLng = new LatLng(39.909736, 116.397400);
         //移动相机到指定位置
